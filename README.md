@@ -14,20 +14,22 @@ The file names and descriptions of the data are as follows:
 - `income.csv`: Median household income of Wake County's 20 townships.
 - `population.csv`: Population of Wake County's 20 townships.
 
+After eliminating erroneous entries and outliers, the housing prices in the dataset ranges from $100,000 to $1,500,000.
+
 ### Objective
 Since the global pandemic Covid broke in 2020, the state of North Carolina has seen a surge of population from migration both nationally and internationally. Within the US, tens of thousands of people moved from New York, Pennsylvania and California to North Carolina every year attracted by its high-quality public education, newer infrastructure, great parks, good public safety, lower income and property tax rate and so on, bidding the housing prices up significantly. Wake county sits in the heart of the research triangle. It has seen its personal property tax base increase from 6.0 billion to 11.6 billion from 2020 to 2025, almost doubled.
 
 The objective of this analysis is to predict single family housing prices in Wake County, North Carolina based on property location and characteristics. It aims to find what factors predict single family housing prices in Wake County, and to provide insights into the hot North Carolina real estate market for relocating families.
 
 ### Findings
-- Time series trend analysis shows that real estate prices in Wake County have fluctuated around the mean from October 2023 to October 2025, with **a visible downtrend in price starting from July 2025 to the end of the analysis period**.
+- A time-series analysis of repeat-sale properties indicates that Wake County home prices largely oscillated around a stable mean between October 2023 and October 2025. **Prices began to decline noticeably in July 2025, followed by a gradual recovery starting in September.**
   
 - The baseline linear regression model using all quantitative features indicates that sale price is positively associated with total heated area at sale, assessed grade difference (which reflects the property’s overall condition relative to comparable properties), median household income and population of the town, parcel deeded acreage at sale, and year of addition. In contrast, sale price is negatively associated with story height and year built, while the number of rooms has no impact on sale price.
   
 - **The top five most influential predictors are total heated area at sale, assessed grade difference, median household income, story height and population.** These quantitative factors are great representations of the house's size, quality and location, that substantially affect residential properties’ value.
   
-- After applying a third-degree polynomial transformation and selecting the eight most important features, the mean squared error decreased by 8.6% compared to the baseline. As expected, these eight features represent combinations and interactions of the top five most influential features from the baseline linear regression model.
+- After applying a third-degree polynomial transformation and selecting the eight most important features, the mean squared error decreased by 13% compared to the baseline. **The model’s mean absolute error on the test set is $62,959, indicating strong predictive performance for single-family home prices.** As expected, these eight features represent combinations and interactions of the top five most influential features from the baseline linear regression model.
   
 - The test mean squared errors of the regression model trained with both quantitative and qualitative features and qualitative features only are substantially higher than the baseline. This is likely because qualitative features introduce noise and multicollinearity, which negatively affect linear regression performance. Therefore, it is preferable to use only quantitative features when predicting housing prices with linear regression models.
   
-- The test mean squared errors from the neural network regression models with quantitative features are still higher than the baseline, indicating that the linear regression model is more suitable for predicting housing prices.
+- The test mean squared errors from the neural network regression models with one or two hidden layers are still higher than the baseline, indicating that the linear regression model is more suitable for predicting housing prices.
