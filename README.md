@@ -21,8 +21,13 @@ The objective of this analysis is to predict single family housing prices in Wak
 
 ### Findings
 - Time series trend analysis shows that real estate prices in Wake County have fluctuated around the mean from October 2023 to October 2025, with **a visible downtrend in price starting from July 2025 to the end of the analysis period**.
+  
 - The baseline linear regression model using all quantitative features indicates that sale price is positively associated with total heated area at sale, assessed grade difference (which reflects the property’s overall condition relative to comparable properties), median household income and population of the town, parcel deeded acreage at sale, and year of addition. In contrast, sale price is negatively associated with story height and year built, while the number of rooms has no impact on sale price.
+  
 - **The top five most influential predictors are total heated area at sale, assessed grade difference, median household income, story height and population.** These quantitative factors are great representations of the house's size, quality and location, that substantially affect residential properties’ value.
+  
 - After applying a third-degree polynomial transformation and selecting the eight most important features, the mean squared error decreased by 8.6% compared to the baseline. As expected, these eight features represent combinations and interactions of the top five most influential features from the baseline linear regression model.
+  
 - The test mean squared errors of the regression model trained with both quantitative and qualitative features and qualitative features only are substantially higher than the baseline. This is likely because qualitative features introduce noise and multicollinearity, which negatively affect linear regression performance. Therefore, it is preferable to use only quantitative features when predicting housing prices with linear regression models.
+  
 - The test mean squared errors from the neural network regression models with quantitative features are still higher than the baseline, indicating that the linear regression model is more suitable for predicting housing prices.
