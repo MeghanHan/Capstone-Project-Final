@@ -1,7 +1,7 @@
 # Capstone-Project-Final
 This is the final report for the capstone project.
 
-Links to [prompt](https://github.com/MeghanHan/Capstone-First-Draft/blob/main/Capstone_First_Draft.ipynb), [data](https://github.com/MeghanHan/Capstone-First-Draft/blob/main/Capstone_First_Draft.ipynb), and [images](https://github.com/MeghanHan/Capstone-First-Draft/tree/main/image)
+Links to [prompt](https://github.com/MeghanHan/Capstone-Project-Final/blob/main/Capstone_Project.ipynb), [data](https://github.com/MeghanHan/Capstone-Project-Final/tree/main/data), and [images](https://github.com/MeghanHan/Capstone-Project-Final/tree/main/image)
 
 ### Data
 The dataset for the capstone project consists of four `.csv` files.
